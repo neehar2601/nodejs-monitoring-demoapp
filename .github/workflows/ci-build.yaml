@@ -78,6 +78,7 @@ jobs:
         with:
           image: ${{ secrets.DOCKER_USERNAME }}/nodejsmonitoring:v${{ github.run_number }}
           run: echo "hello world"
+          run: docker ps -a
           
 
 
