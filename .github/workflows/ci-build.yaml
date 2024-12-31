@@ -78,6 +78,7 @@ jobs:
         with:
           image: ${{ secrets.DOCKER_USERNAME }}/nodejsmonitoring:v${{ github.run_number }}
           run: |
+              apt update && apt install docker.io -y
               echo "hello world"
               docker ps -a
           
