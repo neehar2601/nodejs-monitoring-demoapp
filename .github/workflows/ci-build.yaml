@@ -77,8 +77,9 @@ jobs:
       - uses: addnab/docker-run-action@v3
         with:
           image: ${{ secrets.DOCKER_USERNAME }}/nodejsmonitoring:v${{ github.run_number }}
-          run: echo "hello world"
-          run: docker ps -a
+          run: |
+              echo "hello world"
+              docker ps -a
           
 
 
